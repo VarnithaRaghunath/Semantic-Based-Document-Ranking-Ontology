@@ -1,0 +1,18 @@
+Supervised learning is a type of machine learning where the model is trained on labeled data. 
+This means that each training example is paired with an output label. 
+The goal is for the model to learn the mapping from the input to the output.
+
+There are two main types of supervised learning: classification and regression. 
+In classification, the output variable is a category, such as 'spam' or 'not spam'. 
+In regression, the output variable is a real value, such as 'price' or 'weight'.
+
+The process of supervised learning involves several key steps. 
+First, a dataset is collected and labeled. Next, the data is split into training and testing sets. 
+The model is trained on the training set, where it learns to associate inputs with the correct outputs. 
+After training, the model is evaluated on the testing set to see how well it generalizes to new data.
+
+Common algorithms used in supervised learning include decision trees, random forests, support vector machines, and neural networks. 
+Each algorithm has its strengths and weaknesses, and the choice of algorithm depends on the specific problem at hand.
+
+Supervised learning is widely used in various applications such as email filtering, fraud detection, and predictive maintenance. 
+It is a powerful tool for making predictions and automating decision-making processes.

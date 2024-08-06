@@ -1,0 +1,16 @@
+Unsupervised learning is a type of machine learning where the model is trained on unlabeled data. 
+Unlike supervised learning, there are no output labels to guide the learning process. 
+Instead, the model tries to find patterns and relationships in the data.
+
+The main types of unsupervised learning are clustering and association. 
+Clustering involves grouping similar data points together, while association involves finding rules that describe relationships between variables in the data.
+
+Clustering algorithms include k-means, hierarchical clustering, and DBSCAN. 
+These algorithms can be used for tasks such as customer segmentation, image compression, and anomaly detection. 
+Association algorithms, such as the Apriori algorithm, are commonly used in market basket analysis to find associations between items in large datasets.
+
+Unsupervised learning is useful for exploring the structure of the data and finding hidden patterns. 
+It is often used as a preprocessing step before applying supervised learning techniques. 
+It can also be used for dimensionality reduction, which simplifies the data and makes it easier to visualize and analyze.
+
+Despite its challenges, unsupervised learning is a powerful tool for gaining insights from data and discovering new knowledge.

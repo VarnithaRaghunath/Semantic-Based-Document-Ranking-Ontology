@@ -1,0 +1,4 @@
+Ensemble methods are techniques that combine the predictions of multiple machine learning models to improve overall performance. 
+The idea is that by combining different models, the strengths of each model can compensate for the weaknesses of others. 
+Common ensemble methods include bagging (e.g., Random Forest), boosting (e.g., Gradient Boosting, AdaBoost), and stacking. 
+Ensemble methods are known to produce more accurate and robust models compared to individual models.
