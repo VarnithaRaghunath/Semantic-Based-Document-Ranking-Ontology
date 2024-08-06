@@ -1,0 +1,122 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+    <!-- Ontology Definition -->
+    <owl:Ontology rdf:about="http://www.example.com/ontology/machine_learning"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="http://www.example.com/ontology/machine_learning#MachineLearning"/>
+    <owl:Class rdf:about="http://www.example.com/ontology/machine_learning#SupervisedLearning"/>
+    <owl:Class rdf:about="http://www.example.com/ontology/machine_learning#UnsupervisedLearning"/>
+    <owl:Class rdf:about="http://www.example.com/ontology/machine_learning#ReinforcementLearning"/>
+    <owl:Class rdf:about="http://www.example.com/ontology/machine_learning#Algorithm"/>
+    <owl:Class rdf:about="http://www.example.com/ontology/machine_learning#Application"/>
+    <owl:Class rdf:about="http://www.example.com/ontology/machine_learning#Dataset"/>
+    <owl:Class rdf:about="http://www.example.com/ontology/machine_learning#EvaluationMetric"/>
+
+    <!-- Class Hierarchy -->
+    <rdf:Description rdf:about="http://www.example.com/ontology/machine_learning#SupervisedLearning">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontology/machine_learning#MachineLearning"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.example.com/ontology/machine_learning#UnsupervisedLearning">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontology/machine_learning#MachineLearning"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.example.com/ontology/machine_learning#ReinforcementLearning">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontology/machine_learning#MachineLearning"/>
+    </rdf:Description>
+
+    <!-- Properties -->
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontology/machine_learning#IncludesAlgorithm"/>
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontology/machine_learning#UsedInApplication"/>
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontology/machine_learning#UsesDataset"/>
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontology/machine_learning#BelongsToCategory"/>
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontology/machine_learning#UsesAlgorithm"/>
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontology/machine_learning#UsedInAlgorithm"/>
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontology/machine_learning#EvaluatesAlgorithm"/>
+
+    <!-- Domain and Range Definitions -->
+    <rdf:Description rdf:about="http://www.example.com/ontology/machine_learning#IncludesAlgorithm">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#SupervisedLearning"/>
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#UnsupervisedLearning"/>
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#ReinforcementLearning"/>
+        <rdfs:range rdf:resource="http://www.example.com/ontology/machine_learning#Algorithm"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.example.com/ontology/machine_learning#UsedInApplication">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#SupervisedLearning"/>
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#UnsupervisedLearning"/>
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#ReinforcementLearning"/>
+        <rdfs:range rdf:resource="http://www.example.com/ontology/machine_learning#Application"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.example.com/ontology/machine_learning#UsesDataset">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#SupervisedLearning"/>
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#UnsupervisedLearning"/>
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#ReinforcementLearning"/>
+        <rdfs:range rdf:resource="http://www.example.com/ontology/machine_learning#Dataset"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.example.com/ontology/machine_learning#BelongsToCategory">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.example.com/ontology/machine_learning#SupervisedLearning"/>
+        <rdfs:range rdf:resource="http://www.example.com/ontology/machine_learning#UnsupervisedLearning"/>
+        <rdfs:range rdf:resource="http://www.example.com/ontology/machine_learning#ReinforcementLearning"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.example.com/ontology/machine_learning#UsesAlgorithm">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#Application"/>
+        <rdfs:range rdf:resource="http://www.example.com/ontology/machine_learning#Algorithm"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.example.com/ontology/machine_learning#UsedInAlgorithm">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#Dataset"/>
+        <rdfs:range rdf:resource="http://www.example.com/ontology/machine_learning#Algorithm"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.example.com/ontology/machine_learning#EvaluatesAlgorithm">
+        <rdfs:domain rdf:resource="http://www.example.com/ontology/machine_learning#EvaluationMetric"/>
+        <rdfs:range rdf:resource="http://www.example.com/ontology/machine_learning#Algorithm"/>
+    </rdf:Description>
+
+    <!-- Instances -->
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontology/machine_learning#LinearRegression">
+        <rdf:type rdf:resource="http://www.example.com/ontology/machine_learning#Algorithm"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontology/machine_learning#KMeansClustering">
+        <rdf:type rdf:resource="http://www.example.com/ontology/machine_learning#Algorithm"/>
+        <rdfs:label>K-Means Clustering</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontology/machine_learning#QLearning">
+        <rdf:type rdf:resource="http://www.example.com/ontology/machine_learning#Algorithm"/>
+        <rdfs:label>Q-Learning</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontology/machine_learning#SpamDetection">
+        <rdf:type rdf:resource="http://www.example.com/ontology/machine_learning#Application"/>
+        <rdfs:label>Spam Detection</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontology/machine_learning#CustomerSegmentation">
+        <rdf:type rdf:resource="http://www.example.com/ontology/machine_learning#Application"/>
+        <rdfs:label>Customer Segmentation</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontology/machine_learning#RobotNavigation">
+        <rdf:type rdf:resource="http://www.example.com/ontology/machine_learning#Application"/>
+        <rdfs:label>Robot Navigation</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontology/machine_learning#IrisDataset">
+        <rdf:type rdf:resource="http://www.example.com/ontology/machine_learning#Dataset"/>
+        <rdfs:label>Iris Dataset</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontology/machine_learning#Accuracy">
+        <rdf:type rdf:resource="http://www.example.com/ontology/machine_learning#EvaluationMetric"/>
+        <rdfs:label>Accuracy</rdfs:label>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
